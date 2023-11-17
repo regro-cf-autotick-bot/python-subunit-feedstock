@@ -1,5 +1,5 @@
 {% set name = "python-subunit" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-subunit-{{ version }}.tar.gz
-  sha256: 042039928120fbf392e8c983d60f3d8ae1b88f90a9f8fd7188ddd9c26cad1e48
+  sha256: 1079363131aa1d3f45259237265bc2e61a77e35f20edfb6e3d1d2558a2cdea34
 
 build:
   noarch: python
   number: 0
   script: "python -m pip install . -vv"
-  
 requirements:
   host:
     - python >=3.6
@@ -23,7 +22,7 @@ requirements:
     - extras
     - testtools >=0.9.34
     - six
-    
+
 test:
   imports:
     - subunit
